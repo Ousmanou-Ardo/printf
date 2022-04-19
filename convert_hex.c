@@ -6,7 +6,7 @@ unsigned int convert_X(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
 /**
- * convert_x - Converts an unsigned int argument to hex using abcdef
+ * convert_x - Converting an unsigned int argument to hex using abcdef
  *             and stores it to a buffer contained in a struct.
  * @args: A va_list pointing to the argument to be converted.
  * @flags: Flag modifiers.
@@ -65,8 +65,10 @@ unsigned int convert_X(va_list args, buffer_t *output,
 	if (len == LONG)
 		num = va_arg(args, unsigned long);
 	else
+	
 		num = va_arg(args, unsigned int);
 	if (len == SHORT)
+
 		num = (unsigned short)num;
 
 	if (HASH_FLAG == 1 && num != 0)
